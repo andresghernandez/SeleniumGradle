@@ -1,0 +1,5 @@
+Todos los escenarios
+gradle clean test aggregate
+
+solo un escenario especifico por el tag
+gradle clean test aggregate -Dtags=registro 

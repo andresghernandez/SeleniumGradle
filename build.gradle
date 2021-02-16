@@ -16,7 +16,8 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'                             
+apply plugin: 'net.serenity-bdd.aggregator'
+sourceCompatibility = 1.8
 
 dependencies {
     testCompile 'net.serenity-bdd:serenity-core:2.1.6'                  
@@ -37,7 +38,6 @@ tasks.withType(Test) {
     systemProperty 'webdriver.driver', System.getProperty('webdriver.driver', 'chrome')
     systemProperty 'tags', System.getProperty('tags', '')
     enableAssertions = true
-    systemProperty 'environment', System.getProperty('environment', '')
-    
+    systemProperty 'environment', System.getProperty('environment', '') 
 }
 gradle.startParameter.continueOnFailure = true                      
