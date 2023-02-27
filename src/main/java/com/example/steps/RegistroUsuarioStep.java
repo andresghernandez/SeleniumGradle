@@ -22,6 +22,7 @@ public class RegistroUsuarioStep {
 	
 	@Step
 	public boolean cuentaCreadaExitosamente() {
+		registerUserPage.ingresar();
 		return accountUserPage.cuentaCreada();
 	}
 }

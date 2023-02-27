@@ -1,5 +1,7 @@
 package com.example.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import net.serenitybdd.core.pages.PageObject;
@@ -13,7 +15,8 @@ public class CuentaUsuarioPage extends PageObject {
 	
 	@Step
 	public boolean cuentaCreada() {
-		waitFor(ExpectedConditions.visibilityOf(lblRegister));
+		//waitFor(ExpectedConditions.visibilityOf(lblRegister));
+		getDriver().manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		boolean registroExitoso = false;
 		if (lblRegister.getText().contains("Thank you")) {
 			registroExitoso = true;

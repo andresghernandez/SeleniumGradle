@@ -4,6 +4,8 @@ import org.openqa.selenium.support.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import net.thucydides.core.annotations.Screenshots;
+
 import java.util.concurrent.TimeUnit;
 
 
@@ -25,6 +27,7 @@ public class RegistroUsuarioPage extends PageObject {
 	@FindBy(xpath = "//*[contains(@name,'submit')]")
 	WebElementFacade btnRegister;	
 	
+	@Screenshots(forEachAction = true)
 	public void datosRegistroUsuario(String primerNombre, String segundoNombre, String apellido, String correo, String password, String confirmPassword ) {
 		this.getDriver().manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		txtFirstName.sendKeys(primerNombre);
@@ -32,8 +35,13 @@ public class RegistroUsuarioPage extends PageObject {
 		txtLastName.sendKeys(apellido);
 		txtEmail.sendKeys(correo);
 		txtPassword.sendKeys(password);
-		txtConfirmPassword.sendKeys(confirmPassword);
+		txtConfirmPassword.sendKeys(confirmPassword);	
+	}
+	
+	public void ingresar() {
+		getDriver().manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		btnRegister.click();
 	}
+	
 	
 }

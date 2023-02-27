@@ -9,3 +9,7 @@ out/
 *.iml
 .idea/
 /target/
+.project
+.classpath
+/bin/
+.settings
