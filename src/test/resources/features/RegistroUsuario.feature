@@ -8,8 +8,8 @@ Feature: Registro de usuario
   @registro
   Scenario Outline: Registro de usuario
     Given que estoy en la pagina de registro <fila>
-      | Ruta Excel                         | Pestaña  |
-      | src/test/resources/data/Datos.xlsx | registro |
+      | Ruta Excel                         				 | Pestaña  |
+      | src/test/resources/data/DatosRegistro.xlsx | registro |
     When realizo el registro de los datos
     Then puedo finalizar la creacion del usuario
 
