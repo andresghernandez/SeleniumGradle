@@ -20,17 +20,17 @@ apply plugin: 'net.serenity-bdd.aggregator'
 sourceCompatibility = 1.8
 
 dependencies {
-    testCompile 'net.serenity-bdd:serenity-core:2.1.6'                  
-    testCompile 'net.serenity-bdd:serenity-junit:2.1.6'                
-    testCompile('junit:junit:4.12')
-    testCompile('org.assertj:assertj-core:3.15.0')
-    testCompile('org.slf4j:slf4j-simple:1.7.30')
-    testCompile('org.apache.poi:poi:4.1.2')
-    testCompile('org.apache.poi:poi-ooxml:4.1.2')
-   
-	compile 'net.serenity-bdd:serenity-cucumber:1.9.51'
-	compile 'org.apache.poi:poi:4.1.2'
-	compile 'org.apache.poi:poi-ooxml:4.1.2'
+    testImplementation 'net.serenity-bdd:serenity-core:2.1.6'
+    testImplementation 'net.serenity-bdd:serenity-junit:2.1.6'
+    testImplementation('junit:junit:4.12')
+    testImplementation('org.assertj:assertj-core:3.15.0')
+    testImplementation('org.slf4j:slf4j-simple:1.7.30')
+    testImplementation('org.apache.poi:poi:4.1.2')
+    testImplementation('org.apache.poi:poi-ooxml:4.1.2')
+
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.51'
+    implementation 'org.apache.poi:poi:4.1.2'
+    implementation 'org.apache.poi:poi-ooxml:4.1.2'
 
 }
 
